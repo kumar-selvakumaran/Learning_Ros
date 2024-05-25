@@ -1,4 +1,3 @@
-# FROM debian:buster
 FROM ubuntu:noble
 
 RUN apt update && apt install locales
@@ -7,6 +6,37 @@ RUN update-locale LC_ALL=en_US.UTF-8 LANG=en_US.UTF-8
 RUN export LANG=en_US.UTF-8
 
 RUN DEBIAN_FRONTEND=noninteractive && apt install -y software-properties-common
+
+RUN apt update && apt install -y curl 
+RUN curl -sSL https://raw.githubusercontent.com/ros/rosdistro/master/ros.key -o /usr/share/keyrings/ros-archive-keyring.gpg
+
+RU apt update && sudo apt install -y \
+  python3-flake8-blind-except \
+  python3-flake8-class-newline \
+  python3-flake8-deprecated \
+  python3-mypy \
+  python3-pip \
+  python3-pytest \
+  python3-pytest-cov \
+  python3-pytest-mock \
+  python3-pytest-repeat \
+  python3-pytest-rerunfailures \
+  python3-pytest-runner \
+  python3-pytest-timeout \
+  ros-dev-tools
+
+# mkdir -p ~/ros2_jazzy/src
+# cd ~/ros2_jazzy
+# vcs import --input https://raw.githubusercontent.com/ros2/ros2/jazzy/ros2.repos src
+
+# sudo apt upgrade
+
+# sudo rosdep init
+# rosdep update
+# rosdep install --from-paths src --ignore-src -y --skip-keys "fastcdr rti-connext-dds-6.0.1 urdfdom_headers"
+
+# cd ~/ros2_jazzy/
+# colcon build --symlink-install
 
 ####################################################
 # # Install Dependencies
@@ -43,8 +73,7 @@ RUN DEBIAN_FRONTEND=noninteractive && apt install -y software-properties-common
 
 # // DOCKER RUN COMMAND WITH VOLUMES, AND GUI FUNCTIONALITY.
 # fOR WSL
-# 	
-
+# docker run -it -e DISPLAY=$DISPLAY    -v /tmp/.X11-unix:/tmp/.X11-unix    --network=host    --volume=/mnt/d/projects/ROS_learning/learning_ros/app:/app  --workdir=/app osrf/ros:jazzy-desktop /bin/bash
 # FOR POWERSHELL
 # docker run -it -e DISPLAY=$DISPLAY    -v /tmp/.X11-unix:/tmp/.X11-unix    --network=host    --volume=D:\NEU\semester_2\prcv_5330\opencv_setup\app:/app  --workdir=/app
 
