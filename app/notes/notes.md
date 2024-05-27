@@ -1,7 +1,19 @@
 
 <hr>
 last worked : 5/25/2024<br>
-left at : <a href="https://docs.ros.org/en/jazzy/Tutorials/Beginner-CLI-Tools/Introducing-Turtlesim/Introducing-Turtlesim.html">introducing turtle sim : jazz tutorials</a>
+left at : <a href="https://docs.ros.org/en/jazzy/Tutorials/Beginner-CLI-Tools/Introducing-Turtlesim/Introducing-Turtlesim.html">You can see the nodes, and their associated topics, services, and actions, using the list subcommands of the respective commands:
+
+ros2 node list
+ros2 topic list
+ros2 service list
+ros2 action list
+
+You will learn more about these concepts in the coming tutorials. Since the goal of this tutorial is only to get a general overview of turtlesim, you will use rqt to call some of the turtlesim services and interact with turtlesim_node.
+
+4 Install rqt
+s</a>
+
+![alt text](image.png)
 <hr>
 <details> 
 <summary>Environment vaiables not set as required</summary>
