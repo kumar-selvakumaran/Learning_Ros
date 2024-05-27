@@ -1,5 +1,5 @@
 FROM ubuntu:noble
-
+# DIDNT USE THIS , JUST USE : image : osrf/ros:jazzy-desktop , https://hub.docker.com/layers/osrf/ros/jazzy-desktop/images/sha256-bb1e63cfe6e5ecd286f8f7e59cdd402ace8ab000f4d0e51c52d7a679e43a1155?context=explore
 RUN apt update && apt install locales
 RUN locale-gen en_US en_US.UTF-8
 RUN update-locale LC_ALL=en_US.UTF-8 LANG=en_US.UTF-8
