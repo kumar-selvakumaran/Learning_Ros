@@ -1,7 +1,7 @@
 
 <hr>
 last worked : 5/25/2024<br>
-left at : <a href="https://docs.ros.org/en/jazzy/Tutorials/Beginner-CLI-Tools/Introducing-Turtlesim/Introducing-Turtlesim.html">You can see the nodes, and their associated topics, services, and actions, using the list subcommands of the respective commands:
+left at : <a href="https://docs.ros.org/en/jazzy/Tutorials/Beginner-CLI-Tools/Understanding-ROS2-Services/Understanding-ROS2-Services.html"> ros2 services tutorial </a>
 
 ros2 node list
 ros2 topic list
